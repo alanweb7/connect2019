@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>modelo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="clickedStar()">
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="content-header">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label>Item Avatar</ion-label>
+      <ion-badge color="primary" slot="end">231 <br>visualizações</ion-badge>
+
+    </ion-item>
+  </div>
+
+  <ion-item class="ion-no-padding">
+    <div class="rol-midia ion-no-padding">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" size-md class="col-center">
+            <ion-icon name="volume-mute" class="icon-midia audio-icon"></ion-icon><br><span class="midia-text"> Áudios
+            </span>
+          </ion-col>
+          <ion-col size="4" size-md class="col-center">
+            <ion-icon ios="ios-document" md="md-document" class="icon-midia doc-icon"></ion-icon><br><span
+              class="midia-text"> Documentos </span>
+          </ion-col>
+          <ion-col size="4" size-md class="col-center">
+            <ion-icon ios="ios-wifi" md="md-wifi" class="icon-midia hotspot-icon"></ion-icon><br><span
+              class="midia-text">
+              Hotspot </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-item>
+
+
+
+</ion-content>

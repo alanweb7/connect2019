@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close-circle" style="color: red;font-size: x-large;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container-media">
+    <div class="header-midia" [ngStyle]="headerStyle"><span>{{title_page}}</span></div>
+  </div>
+  <div class="content-midia">
+    <div class="segment-midia">
+
+      <ion-grid fixed>
+
+        <ion-row *ngIf="typeData == 'audio'">
+          <ion-col col-12>
+            <div style="background-color: #1f38794d;">
+              <div *ngFor="let audio of infoData.audio_colection">
+                <div class="full-audio-div" style="text-align: center;">
+                  <audio controls>
+                    <source [src]="audio.audio_link" type="audio/mpeg">
+                    Seu dispositivo não suporta esse formato de audio.
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="typeData == 'doc'">
+          <ion-col col-12 class="info-servico">
+            <ion-list id="verConteDo-list3" *ngFor="let doc of infoData.documento">
+              <a href="{{doc.doc_link}}">
+                <ion-item-sliding class="docitem">
+
+                  <ion-item color="none" id="verConteDo-list-item5">
+                    {{doc.file_name}}
+                    <ion-icon name="document" item-right></ion-icon>
+                  </ion-item>
+
+                  <ion-item-options side="left">
+                    <ion-button color="positive"></ion-button>
+                  </ion-item-options>
+                </ion-item-sliding>
+              </a>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
